@@ -1,0 +1,142 @@
+.App {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.game-hub {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.hub-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.category-tab {
+  padding: 12px 20px;
+  border: 2px solid #e1e5e9;
+  background-color: #ffffff;
+  color: #6c757d;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-tab:hover {
+  border-color: #007bff;
+  color: #007bff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.category-tab.active {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 0 10px;
+}
+
+.no-games {
+  text-align: center;
+  padding: 60px 20px;
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.no-games p {
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .game-hub {
+    padding: 15px;
+  }
+  
+  .hub-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    margin-top: 15px;
+  }
+  
+  .category-tabs {
+    gap: 6px;
+    margin-bottom: 30px;
+    padding: 0 5px;
+  }
+  
+  .category-tab {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .games-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-hub {
+    padding: 10px;
+  }
+  
+  .hub-title {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .category-tabs {
+    gap: 4px;
+    margin-bottom: 25px;
+  }
+  
+  .category-tab {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .games-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .no-games {
+    padding: 40px 15px;
+    font-size: 1rem;
+  }
+}
+
+/* Ensure the page is scrollable */
+body {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
